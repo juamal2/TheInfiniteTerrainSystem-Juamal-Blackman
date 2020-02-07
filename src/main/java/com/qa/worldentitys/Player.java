@@ -1,6 +1,6 @@
 package com.qa.worldentitys;
 
-public class Player extends WorldEntity {
+public class Player extends WorldEntity implements Moveable {
 	private String name = "";
 	
 	public Player(int x, int y) {
@@ -19,7 +19,7 @@ public class Player extends WorldEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	@Override
 	public void move(String direction) {
 		switch (direction) {
 		case "NORTH":
@@ -38,5 +38,8 @@ public class Player extends WorldEntity {
 		}
 		
 	}
+
+
+
 	
 }
